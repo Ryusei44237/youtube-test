@@ -1,0 +1,84 @@
+#top
+        {
+         width:auto;
+         height:60px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: steelblue;
+        }
+#left
+        {
+         width:200px;
+         height:600px;
+         float:left;
+         background-color: grey;
+        }
+#right
+        {
+         width:auto;
+         height:600px;
+         float:left;
+        }
+#right
+        {
+         width:auto;
+         height:600px;
+         float:left;
+        }
+#page1{
+        width: 520px;
+        height: 300px;
+        display: inline-block;
+        vertical-align:top;
+}
+#page2{
+        width: 520px;
+        height: 300px;
+        display: inline-block;
+        vertical-align:top;
+}
+#page3{
+        width: 520px;
+        height: 300px;
+        display: inline-block;
+        vertical-align:top;
+}
+#page4{
+        width: 520px;
+        height: 300px;
+        display: inline-block;
+        vertical-align:top;
+}
+img{
+        width: 150px;
+        height: 150px;
+}
+/**/
+.modal{
+        display: none;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .modal__bg{
+        background: rgba(0,0,0,0.8);
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+    }
+    .modal__content{
+        background: #fff;
+        left: 50%;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 60%;
+
+    }
+.js-modal-open{
+        color: steelblue;
+
+}

@@ -1,0 +1,162 @@
+<!doctype html>
+<!-- created by ryusei -->
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="top.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>検索アプリ</title>
+  </head>
+  <body>
+    <div id="top">
+        <h1>検索アプリ</h1>
+        <div class="content">
+            <a class="js-modal-open" href="">クリックでモーダルを表示</a>
+        </div>
+        <div class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Le_L-mmH9bo?start=2214&autoplay=1&mute=1&rel=0&modestbranding=1"frameborder="0" allowfullscreen></iframe>
+                <a class="js-modal-close" href="">閉じる</a>
+            </div><!--modal__inner-->
+        </div><!--modal-->
+    </div>
+    <div id="left">
+        <form method="get" action="http://www.google.co.jp/search" target="_blank">
+            <input type="text" name="q" size="31" maxlength="255" value="" placeholder="検索したいワードを入力" style="width: 100px;height: 15px;">
+            <input type="submit" name="btng" value="google検索">
+            <input type="hidden" name="hl" value="ja">
+        </form>
+        <div class="list-group">
+            <a href="https://www.hololive.tv/member" class="list-group-item list-group-item-action active">ホロライブ　一覧</a><br>
+            <a href="https://nijisanji.ichikara.co.jp/member/" class="list-group-item list-group-item-action">にじさんじ　一覧</a><br>
+            <a href="https://virtual-youtuber.userlocal.jp/office/personal" class="list-group-item list-group-item-action">無所属　一覧</a><br>
+            <a href="https://www.geartics.com/user-rankings" class="list-group-item list-group-item-action active">有名ゲーマー　ランキング</a>
+        </div>
+        <input type="button" value="フォームグループ表示" onclick="clickBtn1()" /> <<
+        <div id="formgroup">
+            <p>下記のフォームにYouTube動画のリンクを入力することで動画を最大4画面まで並列して見ることができます</p>
+        <!-- 1画面のフォーム -->
+            <form>
+                <input type="text" id="name" placeholder="URLを入力">
+                <input type="button" value="ボタン" onclick="search();">
+            </form>
+            <!-- 2画面のフォーム -->
+            <form>
+                <input type="text" id="name" placeholder="URLを入力">
+                <input type="button" value="ボタン" onclick="search2();">
+            </form>
+            <!-- 3画面のフォーム -->
+            <form>
+                <input type="text" id="name" placeholder="URLを入力">
+                <input type="button" value="ボタン" onclick="search3();">
+            </form>
+            <!-- 4画面のフォーム -->
+            <form>
+                <input type="text" id="name" placeholder="URLを入力">
+                <input type="button" value="ボタン" onclick="search4();">
+            </form>
+        </div>
+    </div>
+
+    <div id="right">
+        <div id="page1">
+            <div id="innerHTMLtxt"></div>
+        </div>
+        <div id="page2">
+            <div id="innerHTMLtxt2"></div>
+        </div><br>
+        <div id="page3">
+            <div id="innerHTMLtxt3"></div>
+        </div>
+        <div id="page4">
+            <div id="innerHTMLtxt4"></div>
+        </div>
+    </div>
+    <div id="right2">
+        <a href="https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ/featured"><img src="image\pekora.webp" alt="兎田ペコラ" id="pekora"></a>
+        <a href="https://www.youtube.com/channel/UCS9uQI-jC3DE0L4IpXyvr6w"><img src="image\koko.webp" alt="桐生ココ"　id="koko"></a>
+        <a href="https://www.youtube.com/user/BYCMsince2012"><img src="image\kun.jpg" alt="BYCMKUN" id="KUN"></a>
+        <a href="https://www.youtube.com/channel/UC0yQ2h4gQXmVUFWZSqlMVOA"><img src="image\hiroyuki.png" alt="hiroyuki" id="hiroyuki"></a>
+    </div>
+    <script>
+        //youtube動画表示スクリプト
+        function search(){
+            var name = document.getElementById("name").value;
+            var splitname = name.split("/")
+            console.log(splitname);
+            var url = splitname[3]
+            console.log(url);
+            var compliteurl = "<iframe width='520' height='300'src='https://www.youtube.com/embed/"+url+"?autoplay=1&mute=1&rel=0&modestbranding=1'frameborder='0' allowfullscreen></iframe>"
+            console.log(compliteurl);
+            innerHTMLtxt.innerHTML=compliteurl;
+        }
+        function search2(){
+            var name = document.getElementById("name").value;
+            var splitname = name.split("/")
+            console.log(splitname);
+            var url = splitname[3]
+            console.log(url);
+            var compliteurl = "<iframe width='520' height='300'src='https://www.youtube.com/embed/"+url+"?autoplay=1&mute=1&rel=0&modestbranding=1'frameborder='0' allowfullscreen></iframe>"
+            console.log(compliteurl);
+            innerHTMLtxt2.innerHTML=compliteurl;
+        }
+        function search3(){
+            var name = document.getElementById("name").value;
+            var splitname = name.split("/")
+            console.log(splitname);
+            var url = splitname[3]
+            console.log(url);
+            var compliteurl = "<iframe width='520' height='300'src='https://www.youtube.com/embed/"+url+"?autoplay=1&mute=1&rel=0&modestbranding=1'frameborder='0' allowfullscreen></iframe>"
+            console.log(compliteurl);
+            innerHTMLtxt3.innerHTML=compliteurl;
+        }
+        function search4(){
+            var name = document.getElementById("name").value;
+            var splitname = name.split("/")
+            console.log(splitname);
+            var url = splitname[3]
+            console.log(url);
+            var compliteurl = "<iframe width='520' height='300'src='https://www.youtube.com/embed/"+url+"?autoplay=1&mute=1&rel=0&modestbranding=1'frameborder='0' allowfullscreen></iframe>"
+            console.log(compliteurl);
+            innerHTMLtxt4.innerHTML=compliteurl;
+        }
+        //ここまでyoutube動画表示スクリプト
+
+        //フォームグループ初期表示は非表示
+        document.getElementById("formgroup").style.display ="none";
+        document.getElementById("right").style.display ="none";
+        document.getElementById("right2").style.display ="block";
+
+        function clickBtn1(){
+            const formgroup = document.getElementById("formgroup");
+
+            if(formgroup.style.display=="block"){
+                // noneで非表示
+                formgroup.style.display ="none";
+                right.style.display ="none";
+                right2.style.display="block"
+            }else{
+                // blockで表示
+                formgroup.style.display ="block";
+                right.style.display = "block";
+                right2.style.display="none"
+            }
+        }
+        //フォームグループ関係ここまで
+
+        $(function(){
+    $('.js-modal-open').on('click',function(){
+        $('.js-modal').fadeIn();
+        return false;
+    });
+    $('.js-modal-close').on('click',function(){
+        $('.js-modal').fadeOut();
+        return false;
+    });
+});
+    </script>       
+  </body>
+</html>
