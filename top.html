@@ -45,17 +45,17 @@
             </form>
             <!-- 2画面のフォーム -->
             <form>
-                <input type="text" id="name" placeholder="URLを入力">
+                <input type="text" id="name2" placeholder="URLを入力">
                 <input type="button" value="ボタン" onclick="search2();">
             </form>
             <!-- 3画面のフォーム -->
             <form>
-                <input type="text" id="name" placeholder="URLを入力">
+                <input type="text" id="name3" placeholder="URLを入力">
                 <input type="button" value="ボタン" onclick="search3();">
             </form>
             <!-- 4画面のフォーム -->
             <form>
-                <input type="text" id="name" placeholder="URLを入力">
+                <input type="text" id="name4" placeholder="URLを入力">
                 <input type="button" value="ボタン" onclick="search4();">
             </form>
         </div>
@@ -94,7 +94,7 @@
             innerHTMLtxt.innerHTML=compliteurl;
         }
         function search2(){
-            var name = document.getElementById("name").value;
+            var name = document.getElementById("name2").value;
             var splitname = name.split("/")
             console.log(splitname);
             var url = splitname[3]
@@ -104,7 +104,7 @@
             innerHTMLtxt2.innerHTML=compliteurl;
         }
         function search3(){
-            var name = document.getElementById("name").value;
+            var name = document.getElementById("name3").value;
             var splitname = name.split("/")
             console.log(splitname);
             var url = splitname[3]
@@ -114,7 +114,7 @@
             innerHTMLtxt3.innerHTML=compliteurl;
         }
         function search4(){
-            var name = document.getElementById("name").value;
+            var name = document.getElementById("name4").value;
             var splitname = name.split("/")
             console.log(splitname);
             var url = splitname[3]
